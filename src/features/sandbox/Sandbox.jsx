@@ -2,6 +2,8 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Button } from 'semantic-ui-react';
 import { increment, decrement } from './testReducer';
+import {openModal} from '../../app/common/modals/modalReducer';
+
 
 export default function Sandbox() {
     const displatch= useDispatch();
@@ -13,6 +15,7 @@ export default function Sandbox() {
     <h3>The data is:{data}</h3>
     <Button content='increment' color='green' onClick={()=> displatch(increment(20))}/>
     <Button content='decrement' color='red' onClick={()=> displatch(decrement(10))}/>
+    <Button content='show modal' color='teal' onClick={()=> displatch(openModal({modalType:'TestModal', modalProps: {data}}))}/>
         </>
     )
 }

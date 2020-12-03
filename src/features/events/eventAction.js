@@ -1,10 +1,12 @@
 import { CREATE_EVENT, UPDATE_EVENT, DELETE_EVENT } from "./eventConstant";
 
 export function createEvent(event) {
+    
     return{
         type:CREATE_EVENT,
         payload: event
     }
+    
 };
 
 export  function updateEvent(event) {

@@ -10,7 +10,7 @@ export default function eventReducer(state = initialState, { type, payload }) {
     case CREATE_EVENT:
       return {
         ...state,
-        events: [...state.events, payload],
+        events: [...state.events, payload],   // payload override the state.events properties
       };
     case UPDATE_EVENT:
       return {
